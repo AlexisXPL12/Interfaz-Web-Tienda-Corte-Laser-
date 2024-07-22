@@ -95,35 +95,63 @@
 
         /*CONTENIDO*/
         .wishlist-section {
-        padding: 30px;
-        background-color: #f8f8f8;
-        text-align: center;
-        min-height: 800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .wishlist-icon {
-        width: 100px;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .wishlist-button {
-        background-color: #FFA500;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1rem;
-        border-radius: 5px;
-        margin-top: 20px;
-    }
-
-    .wishlist-button:hover {
-        background-color: #FF8C00;
-    }
+            text-align: center;
+            margin: 20px 0;
+        }
+        .wishlist-icon {
+            width: 50px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .wishlist-button {
+            display: inline-block;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+        .wishlist-item {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .wishlist-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .wishlist-item img {
+            max-width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .wishlist-item h5 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .wishlist-item p {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .wishlist-item .btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .wishlist-item .btn:hover {
+            background-color: #c82333;
+        }
 
         /*FOOTER*/
         .footer {
@@ -252,10 +280,36 @@
         <div class="wishlist-section">
             <div>
                 <h2>Deseados</h2>
-                <img src="img/iconodeseadosd.png" alt="Deseados Icon" class="wishlist-icon">
-                <p>No hay productos deseados.</p>
-                <p>Explora nuestros productos y agrega tus favoritos a la lista de deseados.</p>
-                <a href="Tienda.html" class="wishlist-button" style="text-decoration: none; color: #f8f8f8;">AGREGAR PRODUCTOS DESEADOS</a>
+                <a href="Tienda.html" class="wishlist-button" style="text-decoration: none;">SEGUIR AGREGANDO</a>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-4">
+                <div class="wishlist-item">
+                    <img src="img/camiongravado.png" alt="Producto 1">
+                    <h5>Camion de MDF con gravado</h5>
+                    <p>Este camión de MDF está diseñado con grabados detallados, ideal para decoración y como regalo personalizado.</p>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="wishlist-item">
+                    <img src="img/lamparaled.png" alt="Producto 2">
+                    <h5>Lampara con diseño de acrilico</h5>
+                    <p>Una elegante lámpara LED con un diseño de acrílico que proporciona una iluminación suave y agradable. Perfecta para cualquier habitación.</p>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="wishlist-item">
+                    <img src="img/reconocimientos personalizados.png" alt="Producto 3">
+                    <h5>Reconocimientos Personalizado</h5>
+                    <p>Estos reconocimientos personalizados son perfectos para premiar logros especiales. Hechos a medida según tus necesidades.</p>
+                    <a href="#" class="btn btn-danger">Eliminar</a>
+                </div>
             </div>
         </div>
     </div>

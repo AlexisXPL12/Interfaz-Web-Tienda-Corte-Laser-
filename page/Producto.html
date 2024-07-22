@@ -196,6 +196,7 @@
             margin-right: 10px;
             font-size: 40px;
         }
+        
     </style>
 </head>
 
@@ -279,11 +280,44 @@
             <div class="col-md-6" style="border: #ccc solid 1px;">
                 <div class="d-flex align-items-center mb-2">
                     <h1 class="font-weight-bold m-0">Esferas Navideñas en MDF</h1>
-                    <button class="btn btn-outline-warning mr-2">
+                    <button class="btn btn-outline-warning mr-2" data-toggle="modal" data-target="#shareModal">
                         <i class="fas fa-share-alt"></i>
                     </button>
+                    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="shareModalLabel">Compartir en redes sociales</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Comparte este contenido en:</p>
+                                    <div class="d-flex justify-content-around">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" class="btn btn-primary" target="_blank">
+                                            <i class="fab fa-facebook-f"></i> Facebook
+                                        </a>
+                                        <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT" class="btn btn-info" target="_blank">
+                                            <i class="fa-brands fa-x-twitter"></i> Twitter
+                                        </a>
+                                        <a href="https://www.linkedin.com/shareArticle?url=YOUR_URL&title=YOUR_TITLE" class="btn btn-primary" target="_blank">
+                                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                                        </a>
+                                        <a href="mailto:?subject=YOUR_SUBJECT&body=YOUR_BODY" class="btn btn-danger">
+                                            <i class="fa-regular fa-envelope"></i> Email
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <button class="btn btn-outline-warning mr-2">
-                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-star"></i>
                     </button>
                 </div>
                 <p class="mb-3">Linda colección de esferas navideñas, fabricada en MDF de 3 milímetros. Precioso regalo para Navidad.</p>
