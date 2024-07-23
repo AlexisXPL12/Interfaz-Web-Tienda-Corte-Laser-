@@ -7,6 +7,41 @@
     <title>Curso de Grabado Láser</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+        .header.dark-mode {
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #333;
+        }
+        .icon {
+            cursor: pointer;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .module, .course-info, .learning-outcomes, .projects {
+            margin-bottom: 20px;
+        }
+        .module h3, .course-info h3, .learning-outcomes h3, .projects h3 {
+            margin-top: 0;
+        }
         body,
         html {
             margin: 0;
@@ -349,6 +384,7 @@
         .promo-price {
             font-size: 2rem;
             font-weight: bold;
+            color: #000;
         }
 
         .promo-discount {
@@ -361,6 +397,7 @@
             list-style: none;
             padding: 0;
             margin: 1rem 0;
+            color: #000;
         }
 
         .promo-list li {
@@ -498,7 +535,9 @@
                 <a href="#" style="color: #F56040"><i class="fab fa-instagram"></i></a>
             </div>
             <span class="navbar-text ms-3">Atención 24/7</span>
-            <i class="fas fa-moon ms-3 moon-icon"></i>
+            <div>
+                <span class="icon" id="darkModeToggle">🌙</span>
+            </div>
         </div>
     </nav>
     <!--IMAGENES ENCABEZADO-->
@@ -508,8 +547,10 @@
                 <p>APRENDE EN LÍNEA</p>
                 <h1>Curso de Grabado Láser</h1>
                 <p>Aprende en 2 horas todo lo relacionado al <br> grabado láser.</p>
-                <a class="btn btn-warning" href="Tienda.html">INSCRÍBETE AHORA</a>
-                <a href="Carrito.html" class="text-white ml-3">Ver carrito</a>
+                <div class="container mt-5">
+                    <a class="btn btn-warning" id="inscribeteBtn" href="Tienda.html">INSCRÍBETE AHORA</a>
+                    <a href="Carrito.html" id="verCarritoLink" class="text-white ml-3" style="display: none;">Ver carrito</a>
+                </div>
             </div>
         </div>
         <!--CUADRES DE ENCABEZADO PEQUEÑOS-->
@@ -558,7 +599,7 @@
                                     <div class="col-12">
                                         <h3>MODULO 3</h3>
                                     </div>
-                                    <p>Hands On Práctica</p>
+                                    <p>Poner en Práctica</p>
                                 </div>
                             </div>
                         </div>
@@ -913,6 +954,23 @@
     </footer>
 
 </body>
+<script>
+    document.getElementById('inscribeteBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('verCarritoLink').style.display = 'inline';
+        
+        setTimeout(function() {
+            window.location.href = 'Tienda.html';
+        }, 100);
+    });
+</script>
+<script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.header').classList.toggle('dark-mode');
+    });
+</script>
 <!-- Bootstrap and JQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
