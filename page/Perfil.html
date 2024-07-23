@@ -12,6 +12,51 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .header.dark-mode {
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #333;
+        }
+
+        .icon {
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .module,
+        .course-info,
+        .learning-outcomes,
+        .projects {
+            margin-bottom: 20px;
+        }
+
+        .module h3,
+        .course-info h3,
+        .learning-outcomes h3,
+        .projects h3 {
+            margin-top: 0;
         }
 
         .navbar-custom-1 {
@@ -149,18 +194,22 @@
         .valid {
             border-color: green;
         }
+
         .invalid {
             border-color: red;
         }
+
         .alert {
             display: none;
             margin-top: 10px;
             padding: 10px;
             color: white;
         }
+
         .alert.success {
             background-color: green;
         }
+
         .alert.error {
             background-color: red;
         }
@@ -285,7 +334,9 @@
                 <a href="#" style="color: #F56040"><i class="fab fa-instagram"></i></a>
             </div>
             <span class="navbar-text ms-3">Atención 24/7</span>
-            <i class="fas fa-moon ms-3 moon-icon"></i>
+            <div>
+                <span class="icon" id="darkModeToggle">🌙</span>
+            </div>
         </div>
     </nav>
     <!-- Imagen encabezado -->
@@ -320,7 +371,7 @@
                         <div class="form-group">
                             <label for="apodo">Apodo</label>
                             <input type="text" class="form-control" id="apodo">
-                            <span class="invalid-feedback">Por favor, ingresa tu apodo.</span>           
+                            <span class="invalid-feedback">Por favor, ingresa tu apodo.</span>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
@@ -366,8 +417,10 @@
                             <input type="tel" class="form-control" id="telefono">
                             <span class="invalid-feedback">Por favor, ingresa tu número de celular o teléfono.</span>
                         </div>
-                        <button onclick="guardarPerfil()" type="submit" class="btn btn-block" style="background: #f4921e;">Guardar</button>
-                        <button class="btn btn-block" style="background: #dc3545;" type="submit" onclick="limpiarPerfil()">Limpiar</button>
+                        <button onclick="guardarPerfil()" type="submit" class="btn btn-block"
+                            style="background: #f4921e;">Guardar</button>
+                        <button class="btn btn-block" style="background: #dc3545;" type="submit"
+                            onclick="limpiarPerfil()">Limpiar</button>
                         <div class="alert success" id="success-alert">Perfil guardado correctamente.</div>
                         <div class="alert error" id="error-alert">Hubo un error al guardar el perfil.</div>
                     </form>
@@ -435,6 +488,13 @@
 
 
 </body>
+<script>
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('.header').classList.toggle('dark-mode');
+    });
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
         cargarPerfil();

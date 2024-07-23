@@ -13,10 +13,12 @@
             padding: 0;
             transition: background-color 0.3s, color 0.3s;
         }
+
         .dark-mode {
             background-color: #121212;
             color: #ffffff;
         }
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -25,21 +27,30 @@
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
         }
+
         .header.dark-mode {
             background-color: #1f1f1f;
             border-bottom: 1px solid #333;
         }
+
         .icon {
             cursor: pointer;
             font-size: 24px;
         }
+
         .content {
             padding: 20px;
         }
-        .product-info, .price-info, .related-products {
+
+        .product-info,
+        .price-info,
+        .related-products {
             margin-bottom: 20px;
         }
-        .product-info h3, .price-info h3, .related-products h3 {
+
+        .product-info h3,
+        .price-info h3,
+        .related-products h3 {
             margin-top: 0;
         }
 
@@ -350,46 +361,52 @@
             <div class="col-6">
                 <div class="border p-3">
                     <div class="d-flex align-items-center mb-2">
-                    <h1>Ángel de la guarda para primera comunión</h1>
-                    <button class="btn btn-outline-warning mr-2" data-toggle="modal" data-target="#shareModal">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                    <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="shareModalLabel">Compartir en redes sociales</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Comparte este contenido en:</p>
-                                    <div class="d-flex justify-content-around">
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" class="btn btn-primary" target="_blank">
-                                            <i class="fab fa-facebook-f"></i> Facebook
-                                        </a>
-                                        <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT" class="btn btn-info" target="_blank">
-                                            <i class="fa-brands fa-x-twitter"></i> Twitter
-                                        </a>
-                                        <a href="https://www.linkedin.com/shareArticle?url=YOUR_URL&title=YOUR_TITLE" class="btn btn-primary" target="_blank">
-                                            <i class="fab fa-linkedin-in"></i> LinkedIn
-                                        </a>
-                                        <a href="mailto:?subject=YOUR_SUBJECT&body=YOUR_BODY" class="btn btn-danger">
-                                            <i class="fa-regular fa-envelope"></i> Email
-                                        </a>
+                        <h1>Ángel de la guarda para primera comunión</h1>
+                        <button class="btn btn-outline-warning mr-2" data-toggle="modal" data-target="#shareModal">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                        <div class="modal fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="shareModalLabel">Compartir en redes sociales</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <div class="modal-body">
+                                        <p>Comparte este contenido en:</p>
+                                        <div class="d-flex justify-content-around">
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL"
+                                                class="btn btn-primary" target="_blank">
+                                                <i class="fab fa-facebook-f"></i> Facebook
+                                            </a>
+                                            <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT"
+                                                class="btn btn-info" target="_blank">
+                                                <i class="fa-brands fa-x-twitter"></i> Twitter
+                                            </a>
+                                            <a href="https://www.linkedin.com/shareArticle?url=YOUR_URL&title=YOUR_TITLE"
+                                                class="btn btn-primary" target="_blank">
+                                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                                            </a>
+                                            <a href="mailto:?subject=YOUR_SUBJECT&body=YOUR_BODY"
+                                                class="btn btn-danger">
+                                                <i class="fa-regular fa-envelope"></i> Email
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Cerrar</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <a href="Deseados1.html" class="btn btn-outline-warning mr-2">
-                        <i class="fas fa-star"></i>
-                    </a>
+
+                        <a href="Deseados1.html" class="btn btn-outline-warning mr-2">
+                            <i class="fas fa-star"></i>
+                        </a>
                     </div>
                     <p>Ángel de la guarda para primera comunión. Un regalo ideal para los comulgantes o para cualquier
                         persona creyente. Este ángel tiene diferentes usos. Puede ser una decoración o una base.</p>
@@ -469,7 +486,7 @@
                         <input type="text" class="form-control" id="textoBase" maxlength="25">
                     </div>
 
-                        <a href="Carrito.html" type="button" class="btn btn-warning col-4">Añadir al carrito</a>
+                    <a href="Carrito.html" type="button" class="btn btn-warning col-4">Añadir al carrito</a>
 
                     <div class="mt-4">
                         <table class="table table-bordered">

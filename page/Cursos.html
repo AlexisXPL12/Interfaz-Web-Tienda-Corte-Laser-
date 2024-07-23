@@ -13,10 +13,12 @@
             padding: 0;
             transition: background-color 0.3s, color 0.3s;
         }
+
         .dark-mode {
             background-color: #121212;
             color: #ffffff;
         }
+
         .header {
             display: flex;
             justify-content: space-between;
@@ -25,23 +27,35 @@
             background-color: #ffffff;
             border-bottom: 1px solid #ddd;
         }
+
         .header.dark-mode {
             background-color: #1f1f1f;
             border-bottom: 1px solid #333;
         }
+
         .icon {
             cursor: pointer;
             font-size: 24px;
         }
+
         .content {
             padding: 20px;
         }
-        .module, .course-info, .learning-outcomes, .projects {
+
+        .module,
+        .course-info,
+        .learning-outcomes,
+        .projects {
             margin-bottom: 20px;
         }
-        .module h3, .course-info h3, .learning-outcomes h3, .projects h3 {
+
+        .module h3,
+        .course-info h3,
+        .learning-outcomes h3,
+        .projects h3 {
             margin-top: 0;
         }
+
         body,
         html {
             margin: 0;
@@ -549,7 +563,8 @@
                 <p>Aprende en 2 horas todo lo relacionado al <br> grabado láser.</p>
                 <div class="container mt-5">
                     <a class="btn btn-warning" id="inscribeteBtn" href="Tienda.html">INSCRÍBETE AHORA</a>
-                    <a href="Carrito.html" id="verCarritoLink" class="text-white ml-3" style="display: none;">Ver carrito</a>
+                    <a href="Carrito.html" id="verCarritoLink" class="text-white ml-3" style="display: none;">Ver
+                        carrito</a>
                 </div>
             </div>
         </div>
@@ -890,7 +905,8 @@
                     <li>✔️ Acceso a grabación</li>
                     <li>✔️ Cupo limitado</li>
                 </ul>
-                <a style="text-decoration: none; color: #f8f9fa;" href="Tienda.html" class="promo-button">INSCRÍBETE AHORA</a>
+                <a style="text-decoration: none; color: #f8f9fa;" href="Tienda.html" class="promo-button">INSCRÍBETE
+                    AHORA</a>
             </div>
         </div>
 
@@ -955,11 +971,11 @@
 
 </body>
 <script>
-    document.getElementById('inscribeteBtn').addEventListener('click', function(event) {
+    document.getElementById('inscribeteBtn').addEventListener('click', function (event) {
         event.preventDefault();
         document.getElementById('verCarritoLink').style.display = 'inline';
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             window.location.href = 'Tienda.html';
         }, 100);
     });
@@ -972,10 +988,11 @@
     });
 </script>
 <!-- Bootstrap and JQuery scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
-    <script src="https://kit.fontawesome.com/34fad0bc74.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+<script src="https://kit.fontawesome.com/34fad0bc74.js" crossorigin="anonymous"></script>
+
 </html>
 </div>
